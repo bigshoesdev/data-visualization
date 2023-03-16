@@ -4,7 +4,6 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import { GetServerSideProps, NextPage } from "next";
 import axios from "axios";
-import { useEffect } from "react";
 
 const Layout = dynamic(() => import("../components/layout"));
 
@@ -19,7 +18,7 @@ type Data = {
   }[];
 };
 
-const Home: NextPage<{
+const Main: NextPage<{
   data: Data[];
   orders: { total: number; store: { name: string; value: number }[] };
 }> = ({ data, orders }) => {
@@ -505,4 +504,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { data, orders } };
 };
 
-export default Home;
+export default Main;

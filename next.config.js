@@ -2,11 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    server: process.env.NODE_ENV !== 'production' ? 'http://localhost:3000' : 'https://hellometer-eyes.vercel.app'
+    server: "http://localhost:3000",
   },
   eslint: {
-    ignoreDuringBuilds: true
-  }
-}
+    ignoreDuringBuilds: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
